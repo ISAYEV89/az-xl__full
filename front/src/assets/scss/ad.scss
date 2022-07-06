@@ -1,0 +1,10 @@
+.ad {
+  display: block;
+
+  & img {
+    width: 100%;
+    height: 120px;
+    object-fit: fill;
+  }
+
+}

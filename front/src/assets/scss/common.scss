@@ -1,0 +1,11 @@
+body {
+  background-color: #F0EEEE;
+}
+
+.cut-text {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 100%;
+  display: block;
+  white-space: nowrap;
+}

@@ -1,0 +1,115 @@
+.contact {
+
+  margin-top: 40px;
+  margin-bottom: 40px;
+  background-color: #fff;
+  padding: 30px;
+
+}
+
+
+.contact-input {
+  width: 100%;
+  font-size: 14px;
+  border: 2px solid #eee;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  outline: none;
+  color: #333;
+  font-weight: 500;
+  padding: 0 15px;
+  height: 40px;
+}
+
+.contact-textarea {
+  width: 100%;
+  font-size: 14px;
+  border: 2px solid #eee;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  outline: none;
+  color: #333;
+  font-weight: 500;
+  padding: 15px;
+  height: 100px;
+}
+
+.contact-submit {
+  color: #fff;
+  //border: 1px solid $main-color;
+  border: none;
+  background-color: $main-color;
+  cursor: pointer;
+  text-transform: uppercase;
+  border-radius: 5px;
+  padding: 5px 30px;
+  transition: all .3s ease;
+
+  &:hover {
+    background-color: #00D2D3;
+  }
+}
+
+.contact-map {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  background-color: #fff;
+  padding: 30px;
+}
+
+.contact-info {
+  margin-top: 30px;
+
+
+  &__item {
+    display: flex;
+    margin-bottom: 24px;
+    align-items: flex-start;
+  }
+
+
+  &__icon {
+    color: $main-color;
+    margin-right: 12px;
+    margin-top: 2px;
+
+    & i {
+      font-size: 20px;
+
+    }
+  }
+
+  &__text {
+    line-height: 1.2;
+    display: block;
+    color: #000;
+    margin-bottom: 0;
+
+    &:hover {
+      text-decoration: none;
+      color: #000;
+
+    }
+  }
+
+}
+
+.map-responsive {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+
+  iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
+
+}
+
+.rotate-90 {
+  transform: rotate(90deg);
+}

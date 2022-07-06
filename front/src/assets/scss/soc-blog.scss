@@ -1,0 +1,68 @@
+.soc-blog {
+
+  &--mb {
+    margin-bottom: 40px;
+
+  }
+
+
+  &__title {
+    font-weight: 600;
+    margin-bottom: 12px;
+
+  }
+
+  &__menu {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+    display: flex;
+  }
+
+  &__item {
+    width: 100%;
+    margin-right: 10px;
+  }
+
+  &__link {
+    width: 100%;
+    background-color: black;
+    font-size: 16px;
+    border-radius: 6px;
+    padding: 6px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+
+    &:hover {
+      text-decoration: none;
+      color: #fff;
+    }
+  }
+}
+
+
+.soc-fb {
+  background-color: #4965B5;
+}
+
+.soc-in {
+  background-color: #0C61BF;
+}
+
+.soc-twitter {
+  background-color: #1B95E0;
+}
+
+.soc-wp {
+  background-color: #5CBE4A;
+}
+
+.soc-letter {
+  background-color: #568EBF;
+}
+
+.soc-telegram {
+  background-color: #27A6E6;
+}

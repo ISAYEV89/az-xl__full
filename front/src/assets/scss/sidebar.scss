@@ -1,0 +1,54 @@
+.sidebar {
+  background-color: #fff;
+  //height: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-top: 20px;
+
+}
+
+
+.sidebar-area {
+  margin-bottom: 35px;
+
+
+  &__heading {
+    color: $main-color;
+    font-size: 24px;
+    font-weight: 700;
+    //border-color: #568ebf;
+    border-bottom: 1px solid $main-color;
+    padding-bottom: 12px;
+    position: relative;
+    margin-bottom: 20px;
+
+    &:before {
+      position: absolute;
+      content: "";
+      height: 8px;
+      width: 8px;
+      border-radius: 50%;
+      background-color: $main-color;
+      bottom: -5px;
+      left: 0;
+    }
+  }
+
+  &__tag {
+    font-size: 14px !important;
+    border-radius: 4px;
+    background: #EEEEEE;
+    margin: 0px 12px 12px 0px;
+    padding: 5px 16px;
+    display: inline-block;
+    color: #3B3B3B;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      background: $main-color;
+      color: #FFF;
+      text-decoration: none;
+    }
+  }
+}
