@@ -1,12 +1,27 @@
 .contact {
-
-  margin-top: 40px;
-  margin-bottom: 40px;
+  height: 100%;
   background-color: #fff;
   padding: 30px;
+  border-radius: 6px;
 
 }
 
+
+.contact-wrap {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.contact-header {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.contact-paragraph {
+  text-align: center;
+  margin-bottom: 20px;
+}
 
 .contact-input {
   width: 100%;
@@ -51,10 +66,17 @@
 }
 
 .contact-map {
-  margin-top: 40px;
-  margin-bottom: 40px;
   background-color: #fff;
   padding: 30px;
+  height: 100%;
+  border-radius: 6px;
+
+
+  @media only screen and (max-width: 991px) {
+    margin-bottom: 20px;
+    height: auto;
+  }
+
 }
 
 .contact-info {

@@ -13,8 +13,8 @@ const PATHS = {
 // url list
 // let htmlUrl = 'index';
 // let htmlUrl = 'blog-inner';
-// let htmlUrl = 'contact';
-let htmlUrl = 'training';
+let htmlUrl = 'contact';
+// let htmlUrl = 'training';
 
 
 
