@@ -3,7 +3,7 @@
 
 
 $host = 'localhost';
-$dbname = 'giveaway';
+$dbname = 'az-xl';
 $user = 'root';
 $pass = '';
 

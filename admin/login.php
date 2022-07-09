@@ -1,3 +1,54 @@
+<?php
+include_once __DIR__ . '/../inc/config.php';
+if (isset($_SESSION['user']['status'])) {
+    if (($_SESSION['user']['status']) == 1) {
+        header("Location: $site_url/admin/index.php");
+        exit;
+    }
+}
+
+/*if (!isset($_SESSION['user']['status'])) {
+    header("Location: $site_url/index.php");
+    exit;
+} else if ($_SESSION['user']['status']) {
+    header("Location: $site_url/index.php");
+    exit;
+} else if($_SESSION['user']['status'] == 7) {
+    header("Location: $site_url/admin/index.php");
+    exit;
+}*/
+
+
+if (isset($_POST['submit'])) {
+
+    $login = $_POST['login'];
+    $pswd = $_POST['pswd'];
+
+    $sql_login = $db->prepare("SELECT * FROM `user` WHERE `login` = '$login' AND `password` = '$pswd' AND `status` = 1");
+    $sql_login->execute();
+    $count = $sql_login->rowCount();
+    $user = $sql_login->fetch(PDO::FETCH_ASSOC);
+
+
+    if ($count > 0) {
+        $_SESSION['user'] = [
+            'id' => $user['id'],
+            'name' => $user['name'],
+            'surname' => $user['surname'],
+            'email' => $user['email'],
+            'status' => $user['status']
+        ];
+        header("Location: $site_url/admin/index.php");
+        exit;
+    } else {
+        $_SESSION['msg'] = 'Login və ya kod səhvdir';
+        header("Location: $site_url/admin/login.php");
+        exit;
+    }
+}
+
+?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -33,7 +84,16 @@
                 <input type="password" required class="form-control" id="pwd" placeholder="Password" name="pswd">
             </div>
 
-
+            <?php
+            if (isset($_SESSION['msg'])) {
+                ?>
+                <div class="alert alert-danger">
+                    <?php echo $_SESSION['msg']; ?>
+                </div>
+                <?php
+                unset($_SESSION['msg']);
+            }
+            ?>
 
 
             <button type="submit" name="submit" class="btn btn-primary">Daxil ol</button>

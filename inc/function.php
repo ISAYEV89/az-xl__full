@@ -5,8 +5,8 @@ function filter_form($post){
 }
 
 
-function test($tt) {
+/*function test($tt) {
     echo $tt;
-}
+}*/
 
 ?>
