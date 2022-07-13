@@ -15,9 +15,9 @@ if (empty(($_SESSION['user']))) {
 }
 
 
-echo '<pre>';
+/*echo '<pre>';
 print_r($_SESSION['user']);
-echo '</pre>';
+echo '</pre>';*/
 
 ?>
 
