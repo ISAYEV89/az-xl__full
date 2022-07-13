@@ -1,7 +1,5 @@
 <?php
 
-
-
 $host = 'localhost';
 $dbname = 'az-xl';
 $user = 'root';
