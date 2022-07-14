@@ -82,3 +82,19 @@ documentReady(function () {
 
     }, false);
 });
+
+
+$('#datatable').DataTable({
+    "order": [[ 0, "asc" ]]
+});
+
+
+$('.confirm').click(function (e) {
+
+    let isExecuted = confirm("Silmek istediğinden eminsen?");
+
+    if(!isExecuted){
+        e.preventDefault();
+    }
+
+});

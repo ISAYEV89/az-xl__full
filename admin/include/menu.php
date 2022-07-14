@@ -15,13 +15,6 @@
             </a>
         </li>
 
-
-
-
-
-
-
-
         <li>
             <a href="<?php $site_url?>/admin/contact/index.php" class="wui-side-menu-item ">
                 <!--<i class="box-ico fa fa-sign-out-alt"></i>-->
@@ -34,10 +27,7 @@
 
 
 
-
-
-
-        <li>
+        <li class="mt-5">
             <a href="<?php $site_url?>/admin/logout.php" class="wui-side-menu-item ">
                 <i class="box-ico fa fa-sign-out-alt"></i>
                 <span class="box-title">Çıxış</span>

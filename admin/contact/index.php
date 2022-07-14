@@ -2,7 +2,7 @@
 include_once __DIR__ . '/../include/header.php';
 include_once __DIR__ . '/../include/menu.php';
 
-$row = $db->prepare("SELECT * FROM `conctact` ORDER BY `id` DESC ");
+$row = $db->prepare("SELECT * FROM `contact` ORDER BY `id` DESC ");
 $row->execute();
 
 ?>
@@ -25,9 +25,7 @@ $row->execute();
                     <th>Email</th>
                     <th>Movzu</th>
                     <th>Mesaj</th>
-                    <th>Status</th>
                     <th>Emeliyyat</th>
-
                 </tr>
                 </thead>
                 <tbody>
@@ -40,31 +38,24 @@ $row->execute();
                     <tr>
                         <td><?php echo $s ?></td>
                         <td><?php echo $e['name'] ?></td>
-                        <td><?php echo $e['surname'] ?></td>
                         <td><?php echo $e['email'] ?></td>
                         <td><?php echo $e['subject'] ?></td>
                         <td><?php echo $e['text'] ?></td>
 
-                        <td><i class="status-icon fa fa-toggle-<?php echo ($e['s_id'] == 1) ? 'on' : 'off'; ?>"></i>
-                        </td>
+
                         <td>
-                            <a class="edit-icon" href="<?php echo $site_url ?>/admin/faq/add.php?id=<?php echo $e['id']; ?>">
-                                <i class="fa fa-edit"></i>
-                            </a>
-                            <a class="delete-icon deleteItem"  href="<?php echo $site_url ?>/admin/faq/delete.php?delete=<?php echo $e['id']; ?>">
+
+                            <a class="delete-icon deleteItem confirm"
+                               href="<?php echo $site_url ?>/admin/contact/delete.php?delete=<?php echo $e['id']; ?>">
                                 <i class="fas fa-trash-alt"></i>
                             </a>
                         </td>
+
                     </tr>
 
                     <?php
                 }
                 ?>
-
-
-
-
-
                 </tbody>
             </table>
         </div>
@@ -75,6 +66,4 @@ $row->execute();
 
 <?php
 include_once __DIR__ . '/../include/footer.php';
-
-
 ?>
