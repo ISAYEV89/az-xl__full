@@ -38,9 +38,17 @@ $(document).on('change', '.group__select', function () {
 
     let value = $(this).val();
 
-    if(value !== "" ) {
+    if (value !== "") {
         $(this).addClass('active')
     } else {
         $(this).removeClass('active')
     }
+});
+
+
+///// filter accordion
+
+
+$('.filter-text').click(function () {
+    $('.filter-main').slideToggle();
 });
