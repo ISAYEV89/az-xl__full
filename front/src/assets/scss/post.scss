@@ -11,13 +11,7 @@
   &--mb {
     margin-bottom: 30px;
   }
-}
 
-
-.post-img {
-  display: block;
-  position: relative;
-  transition: all 0.3s ease;
 
   &:hover {
     transition: all 0.3s ease;
@@ -30,7 +24,7 @@
 
   }
 
-  &:hover:before {
+  &:hover .post-img:before {
     position: absolute;
     content: "";
     top: 0;
@@ -40,6 +34,14 @@
     background-color: rgba(0, 0, 0, 0.4);
     border-radius: 10px 10px 0 0;
   }
+}
+
+
+.post-img {
+  display: block;
+  position: relative;
+  transition: all 0.3s ease;
+
 
   & img {
     width: 100%;
