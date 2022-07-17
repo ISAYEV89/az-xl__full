@@ -31,6 +31,13 @@
         </li>
 
         <li>
+            <a href="/admin/category/index.php" class="wui-side-menu-item ">
+                <i class="box-ico fa fa-plus"></i>
+                <span class="box-title">Kategoriya elave</span>
+            </a>
+        </li>
+
+        <li>
             <a href="<?php $site_url?>/admin/contact/index.php" class="wui-side-menu-item ">
                 <!--<i class="box-ico fa fa-sign-out-alt"></i>-->
                 <i class="box-ico fa fa-envelope"></i>
