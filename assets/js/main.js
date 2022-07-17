@@ -1,5 +1,6 @@
 const siteUrl = 'http://az-xl.local';
 
+console.log('asdasd');
 
 ////group input ( input animation )
 
@@ -43,6 +44,54 @@ $(document).on('change', '.group__select', function () {
     }
 });
 
+/////// menu
+
+
+const openedMenu = document.querySelector('.opened-menu');
+const closedMenu = document.querySelector('.closed-menu');
+const navbarMenu = document.querySelector('.navbar');
+const menuOverlay = document.querySelector('.overlay');
+
+// Opened navbarMenu
+// Closed navbarMenu
+// Closed navbarMenu by Click Outside
+openedMenu.addEventListener('click', toggleMenu);
+closedMenu.addEventListener('click', toggleMenu);
+menuOverlay.addEventListener('click', toggleMenu);
+
+// Toggle Menu Function
+function toggleMenu() {
+    navbarMenu.classList.toggle('active');
+    menuOverlay.classList.toggle('active');
+    document.body.classList.toggle('scrolling');
+}
+
+navbarMenu.addEventListener('click', (event) => {
+    if (event.target.hasAttribute('data-toggle') && window.innerWidth <= 992) {
+        // Prevent Default Anchor Click Behavior
+        event.preventDefault();
+        const menuItemHasChildren = event.target.parentElement;
+
+        // If menuItemHasChildren is Expanded, Collapse It
+        if (menuItemHasChildren.classList.contains('active')) {
+            collapseSubMenu();
+        } else {
+            // Collapse Existing Expanded menuItemHasChildren
+            if (navbarMenu.querySelector('.menu-item-has-children.active')) {
+                collapseSubMenu();
+            }
+            // Expand New menuItemHasChildren
+            menuItemHasChildren.classList.add('active');
+            const subMenu = menuItemHasChildren.querySelector('.sub-menu');
+            subMenu.style.maxHeight = subMenu.scrollHeight + 'px';
+        }
+    }
+});
+
+///// filter accordion
+$('.filter-text').click(function () {
+    $('.filter-main').slideToggle();
+});
 
 //// popup
 

@@ -207,3 +207,50 @@ body {
     max-width: 1000px;
     margin: 0 auto;
 }
+
+
+.page-header {
+    margin-top: 20px;
+    border: solid green;
+    padding: 10px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.sidebar-area__tag {
+    font-size: 14px;
+    border-radius: 4px;
+    background: #eee;
+    margin: 0 12px 12px 0;
+    padding: 5px 16px;
+    display: inline-block;
+    color: #3b3b3b;
+    font-weight: 600;
+}
+
+.edit-icon {
+    margin-right: 6px;
+}
+
+.edit-icon:hover {
+    text-decoration: none;
+}
+
+.edit-icon i {
+    color: #008000;
+}
+
+.delete-icon i {
+    color: #FF0000;
+}
+
+.tag-name {
+    display: inline-block;
+    margin-right: 20px;
+    margin-bottom: 0;
+}
+
+.tag-list {
+    margin-bottom: 36px;
+}

@@ -1,4 +1,150 @@
-<footer></footer>
+<footer>
+    <div class="footer__top">
+        <div class="container">
+
+            <div class="row ">
+
+                <div class="col-xl-12 ">
+                    <a href="" class="footer__logo">
+                        <img src="./assets/image/icon/MicrosoftLogo.png" alt="">
+                    </a>
+                </div>
+
+                <div class="col-xl-3 col-lg-6 col-md-6">
+                    <h3 class="footer__title">ƏLAQƏ MƏLUMATLARI</h3>
+
+
+                    <div class="footer__contact border-contact">
+
+                        <div class="footer__contact-icon">
+                            <i class="fa fa-phone rotate-90"></i>
+                        </div>
+
+
+                        <div class="footer__contact-text">
+                            <a href="mailto:admin@az-xl.com" class="contact-info__text">+994 55 555 55 55</a>
+                            <a href="mailto:admin@az-xl.com" class="contact-info__text">+994 55 555 55 55</a>
+                        </div>
+
+                    </div>
+
+                    <div class="footer__contact border-contact">
+
+                        <div class="footer__contact-icon">
+                            <i class="fa fa-envelope"></i>
+                        </div>
+
+
+                        <div class="footer__contact-text">
+                            <a href="mailto:admin@az-xl.com" class="contact-info__text">admin@az-xl.com</a>
+                        </div>
+
+                    </div>
+
+                    <div class="footer__contact border-contact">
+
+                        <div class="footer__contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+
+
+                        <div class="footer__contact-text">
+                            <p>Akademik Mirəsədulla Mirqasımov küçəsi 1
+                                (1 saylı Şəhər Kliniki Xəstəxanası)</p>
+                        </div>
+
+                    </div>
+
+                    <div class="footer__soc">
+
+                    </div>
+
+                </div>
+
+                <div class="offset-xl-0 col-xl-2 offset-lg-2 col-lg-4 offset-md-2 col-md-4">
+                    <h3 class="footer__title">QISA KEÇİDLƏR</h3>
+
+
+                    <ul class="footer__menu">
+                        <li class="footer__menu-item"><a class="footer__menu-link" href=""> Ana sehife (blog) </a></li>
+                        <li class="footer__menu-item"><a class="footer__menu-link" href=""> Telim </a></li>
+                        <li class="footer__menu-item"><a class="footer__menu-link" href=""> Elaqe </a></li>
+                    </ul>
+
+
+                </div>
+
+                <div class="col-xl-5 col-lg-8 col-md-9 ">
+                    <h3 class="footer__title">SON MƏQALƏLƏR</h3>
+
+                    <div class="footer__blog">
+
+
+                        <a href="" class="footer__blog-img">
+                            <img src="./assets/image/blog/46-00.jpg" alt="">
+                        </a>
+
+
+                        <div class="footer__blog-content">
+                            <a href="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci
+                                aliquam dolorum fugit rem sequi velit!.</a>
+                            <p>Lorem İpsum – dizayn nəşrlərində istifadə olunan düzgün olmayan mətndir.Dəqiq quruluşa...
+                                <br>
+                                <a href="">DAVAMINI OXU </a></p>
+                        </div>
+                    </div>
+
+                    <div class="footer__blog">
+
+
+                        <a href="" class="footer__blog-img">
+                            <img src="./assets/image/blog/46-00.jpg" alt="">
+                        </a>
+
+
+                        <div class="footer__blog-content">
+                            <a href="" class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci
+                                aliquam dolorum fugit rem sequi velit!.</a>
+                            <p>Lorem İpsum – dizayn nəşrlərində istifadə olunan düzgün olmayan mətndir.Dəqiq quruluşa...
+                                <br>
+                                <a href="">DAVAMINI OXU </a></p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="counter col-xl-2 col-lg-2 col-md-3">
+                    <img class="" src="./assets/image/icon/shotchik.gif" alt="">
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+    <div class="footer__bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    Copyright © 2018-2022.
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<script type="text/javascript" src="<?php echo $site_url ?>/assets/js/jQueryv3.3.1.js"></script>
+<script type="text/javascript" src="<?php echo $site_url ?>/assets/js/query.validate.min.js"></script>
+<script type="text/javascript" src="<?php echo $site_url ?>/assets/js/main.js"></script>
+
+
+</body>
+</html>
 
 
 <!--<style>
@@ -68,11 +214,3 @@
 
 
 </style>-->
-
-<script type="text/javascript" src="<?php echo $site_url ?>/assets/js/jQueryv3.3.1.js"></script>
-<script type="text/javascript" src="<?php echo $site_url ?>/assets/js/query.validate.min.js"></script>
-<script type="text/javascript" src="<?php echo $site_url ?>/assets/js/main.js"></script>
-
-
-</body>
-</html>

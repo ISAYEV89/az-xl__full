@@ -15,6 +15,21 @@
             </a>
         </li>
 
+
+        <li>
+            <a href="/admin/tag/index.php" class="wui-side-menu-item ">
+                <i class="box-ico fa fa-plus"></i>
+                <span class="box-title">Tag elave</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="/admin/function/index.php" class="wui-side-menu-item ">
+                <i class="box-ico fa fa-plus"></i>
+                <span class="box-title">Funksiya elave</span>
+            </a>
+        </li>
+
         <li>
             <a href="<?php $site_url?>/admin/contact/index.php" class="wui-side-menu-item ">
                 <!--<i class="box-ico fa fa-sign-out-alt"></i>-->
