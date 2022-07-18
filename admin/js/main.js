@@ -98,3 +98,21 @@ $('.confirm').click(function (e) {
     }
 
 });
+
+
+/*Show image in input file*/
+
+function readURL(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+        reader.onload = function (e) {
+            $('#blah').attr('src', e.target.result);
+            $('#blah').removeClass('d-none')
+        };
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+
+$('#addImageInput').change(function () {
+    readURL(this);
+});

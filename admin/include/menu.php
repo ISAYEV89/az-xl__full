@@ -15,6 +15,13 @@
             </a>
         </li>
 
+        <li>
+            <a href="/admin/blog/index.php" class="wui-side-menu-item ">
+                <i class="box-ico fa fa-home fa-fw"></i>
+                <span class="box-title">Blog</span>
+            </a>
+        </li>
+
 
         <li>
             <a href="/admin/tag/index.php" class="wui-side-menu-item ">
@@ -34,6 +41,13 @@
             <a href="/admin/category/index.php" class="wui-side-menu-item ">
                 <i class="box-ico fa fa-plus"></i>
                 <span class="box-title">Kategoriya elave</span>
+            </a>
+        </li>
+
+        <li>
+            <a href="/admin/level/index.php" class="wui-side-menu-item ">
+                <i class="box-ico fa fa-plus"></i>
+                <span class="box-title">Seviyye elave</span>
             </a>
         </li>
 
