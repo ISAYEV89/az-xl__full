@@ -2,7 +2,7 @@
 include_once __DIR__ . '/../include/header.php';
 include_once __DIR__ . '/../include/menu.php';
 
-$row = $db->prepare("SELECT * FROM `level` ORDER BY `id` DESC ");
+$row = $db->prepare("SELECT * FROM `comment` ORDER BY `id` DESC ");
 $row->execute();
 
 ?>
@@ -14,16 +14,17 @@ $row->execute();
 
     <div class="page">
         <div class="page-header page-header--st">
-            <div>Seviyye</div>
-            <div><a class="btn btn-add btn-success" href="<?php echo $site_url; ?>/admin/level/edit.php"> <i
-                            class="fa fa-plus"></i> Əlavə et </a></div>
+            <div>Sherhler</div>
         </div>
         <div class="page-main overflow">
             <table id="datatable" class="table table-striped table-bordered" cellspacing="0" width="100%">
                 <thead>
                 <tr>
                     <th>S/s</th>
-                    <th>Seviyye</th>
+                    <th>Ad ve Soyad</th>
+                    <th>Sherh</th>
+                    <th>Tarix</th>
+                    <th>Blog</th>
                     <th>Emeliyyat</th>
                 </tr>
                 </thead>
@@ -37,14 +38,17 @@ $row->execute();
                     <tr>
                         <td><?php echo $s ?></td>
                         <td><?php echo $e['name'] ?></td>
+                        <td><?php echo $e['comment'] ?></td>
+                        <td><?php echo $e['date'] ?></td>
+                        <td><?php echo $e['blog_id'] ?></td>
 
                         <td>
-                            <a class="edit-icon" href="<?php echo $site_url ?>/admin/level/add.php?id=<?php echo $e['id']; ?>">
+                            <a class="edit-icon" href="<?php echo $site_url ?>/admin/comment/add.php?id=<?php echo $e['id']; ?>">
                                 <i class="fa fa-edit"></i>
                             </a>
 
                             <a class="delete-icon deleteItem confirm"
-                               href="<?php echo $site_url ?>/admin/level/delete.php?delete=<?php echo $e['id']; ?>">
+                               href="<?php echo $site_url ?>/admin/comment/delete.php?delete=<?php echo $e['id']; ?>">
                                 <i class="fas fa-trash-alt"></i>
                             </a>
                         </td>

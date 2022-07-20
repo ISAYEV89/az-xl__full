@@ -52,6 +52,15 @@
         </li>
 
         <li>
+            <a href="/admin/comment/index.php" class="wui-side-menu-item ">
+                <i class="box-ico fa fa-comment"></i>
+                <span class="box-title">Sherhler</span>
+            </a>
+        </li>
+
+
+
+        <li>
             <a href="<?php $site_url?>/admin/contact/index.php" class="wui-side-menu-item ">
                 <!--<i class="box-ico fa fa-sign-out-alt"></i>-->
                 <i class="box-ico fa fa-envelope"></i>
