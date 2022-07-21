@@ -133,14 +133,7 @@ include_once __DIR__ . '/../include/menu.php';
                 <div>
                     <input type="submit" class="btn-submit2" name="btn_submit" value="ELave et">
                 </div>
-
-
-                <!--<input type="text" name="name" value=''>
-
-                <input type="submit" name="btn_submit" value="Elave et">-->
-
             </form>
-
 
         </div>
     </div>
@@ -189,10 +182,6 @@ if (isset($_POST['btn_submit'])) {
     $sql->execute();
 
     header("Location: $site_url/admin/blog/index.php");
-
-/*    echo "INSERT INTO `blog` (`title`, `short_text`, `tag_id`, `cat_id`, `level_id`, `img`, `s_id`)
-                                           VALUES ('$title', '$short_text', '$tag_id', '$cat_id', '$level_id','$img', '$s_id')";*/
-
 
 }
 

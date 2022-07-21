@@ -1,11 +1,7 @@
-<?php require_once __DIR__ . './include/header.php'; ?>
+<?php require_once __DIR__ . '/include/header.php'; ?>
 
 
-<div class="container2">
-    <a href="#" class="ad">
-        <img src="./assets/image/icon/ad2.png" alt="">
-    </a>
-</div>
+<?php require_once __DIR__ . '/include/training.php'; ?>
 
 
 <div class="main">
@@ -180,5 +176,5 @@ if (isset($_POST['contact-btn'])) {
 
 ?>
 
-<?php require_once __DIR__ . './include/footer.php' ?>
+<?php require_once __DIR__ . '/include/footer.php' ?>
 

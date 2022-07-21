@@ -1,6 +1,6 @@
-<?php require_once __DIR__ . './include/header.php'; ?>
+<?php require_once __DIR__ . '/include/header.php'; ?>
 
-<?php require_once __DIR__ . './include/training.php'; ?>
+<?php require_once __DIR__ . '/include/training.php'; ?>
 
 <?php
 
@@ -13,15 +13,10 @@ if (isset($_GET['id'])) {
     $blog->execute();
     $post = $blog->fetch(PDO::FETCH_ASSOC);
 
-
     if (empty($post)) {
         header("Location: $site_url");
     }
-
 }
-
-
-
 ?>
 
 
@@ -284,11 +279,11 @@ if (isset($_GET['id'])) {
 
                 </div>
 
-                <?php require_once __DIR__ . './include/sidebar.php' ?>
+                <?php require_once __DIR__ . '/include/sidebar.php' ?>
 
             </div>
         </div>
     </div>
 
 
-<?php require_once __DIR__ . './include/footer.php' ?>
+<?php require_once __DIR__ . '/include/footer.php' ?>
