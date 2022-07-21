@@ -10,65 +10,31 @@
     <div class="container">
 
         <div class="row ">
-            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 post--mb">
-                <div class="post  style_prevu_kit">
-                    <a href="#" class="post-img">
-                        <img src="./assets/image/blog/49-02.jpg" alt="">
-                        <div class="post-text">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus cum delectus illum ipsa
-                            ipsum quae quia ratione repudiandae. Possimus, sed.
-                        </div>
-                    </a>
-                    <div class="post-content">
-                        <a href="#" class="post-title">Daha rahat avtomatlaşdırma</a>
 
-                        <div class="post-text-mob">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus cum delectus illum ipsa
-                            ipsum quae quia ratione repudiandae. Possimus, sed.
+            <?php
+            $posts = $db->prepare("SELECT * FROM `blog`");
+            $posts->execute();
+
+            while ($post = $posts->fetch(PDO::FETCH_ASSOC)) {
+                ?>
+
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 post--mb">
+                    <div class="post d-block style_prevu_kit">
+                        <a href="<?php echo $site_url . '/blog.php?id=' . $post['id'] ?>" class="post-img">
+                            <img src="<?php echo $site_url . '/admin/image/blog/' . $post['img'] ?>" alt="">
+                            <div class="post-text"><?php echo $post['short_text'] ?></div>
+                        </a>
+                        <div class="post-content">
+                            <a href="<?php echo $site_url . '/blog.php?id=' . $post['id'] ?>"
+                               class="post-title"><?php echo $post['title'] ?></a>
+                            <div class="post-text-mob"><?php echo $post['short_text'] ?></div>
                         </div>
                     </div>
                 </div>
-            </div>
+                <?php
+            }
+            ?>
 
-            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 post--mb">
-                <div class="post  style_prevu_kit">
-                    <a href="#" class="post-img">
-                        <img src="./assets/image/blog/50-00.jpg" alt="">
-                        <div class="post-text">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus cum delectus illum ipsa
-                            ipsum quae quia ratione repudiandae. Possimus, sed.
-                        </div>
-                    </a>
-                    <div class="post-content">
-                        <a href="#" class="post-title">Daha rahat avtomatlaşdırma üçün Exceldə bazaları necə
-                            qurmalı?</a>
-                        <div class="post-text-mob">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 post--mb">
-                <div class="post  style_prevu_kit">
-                    <a href="#" class="post-img">
-                        <img src="./assets/image/blog/51-00.jpg" alt="">
-                        <div class="post-text">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus cum delectus illum ipsa
-                            ipsum quae quia ratione repudiandae. Possimus, sed.
-                        </div>
-                    </a>
-                    <div class="post-content">
-                        <a href="#" class="post-title">Daha rahat avtomatlaşdırma üçün Exceldə bazaları necə
-                            qurmalı?</a>
-                        <div class="post-text-mob">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus cum delectus illum ipsa
-                            ipsum quae quia ratione repudiandae. Possimus, sed.
-                        </div>
-                    </div>
-                </div>
-            </div>
 
             <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 post--mb">
                 <div class="post  style_prevu_kit">
@@ -90,24 +56,8 @@
                 </div>
             </div>
 
-            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 post--mb">
-                <div class="post  style_prevu_kit">
-                    <a href="#" class="post-img">
-                        <img src="./assets/image/blog/48-99.jpg" alt="">
-                    </a>
-                    <div class="post-content">
-                        <a href="#" class="post-title">Daha rahat avtomatlaşdırma üçün Exceldə bazaları necə
-                            qurmalı?</a>
-                        <div class="post-text-mob">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
             <div class="col-xl-12">
-                <div class="pagination d-none">
+                <div class="pagination ">
                     <button class="pagination__btn">
                         <i class="fa fa-chevron-left"></i>
                     </button>
