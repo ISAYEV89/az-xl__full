@@ -118,7 +118,7 @@ include_once __DIR__ . '/../include/menu.php';
 
                 <div class="blog-add__wrap">
                     <p class="blog-add__title">Metn :</p>
-                    <textarea class="blog-add__textarea" name="text" ></textarea>
+                    <textarea class="blog-add__textarea" id="mytextarea" name="text" ></textarea>
                 </div>
 
 
@@ -140,7 +140,7 @@ include_once __DIR__ . '/../include/menu.php';
 
 </div>
 
-
+<script src="https://cdn.tiny.cloud/1/e9tro6qwkzjq1yf5ijerp38bwwc506bghah3fsr8ovktfgda/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
 <?php
 
 
@@ -188,3 +188,13 @@ if (isset($_POST['btn_submit'])) {
 include_once __DIR__ . '/../include/footer.php';
 ?>
 
+<script>
+    tinymce.init({
+        selector: '#mytextarea',
+        plugins: 'a11ychecker advcode casechange export formatpainter image editimage linkchecker autolink lists checklist media mediaembed pageembed permanentpen powerpaste table advtable tableofcontents tinycomments tinymcespellchecker',
+        toolbar: 'a11ycheck addcomment showcomments casechange checklist code export formatpainter image editimage pageembed permanentpen table tableofcontents',
+        toolbar_mode: 'floating',
+        tinycomments_mode: 'embedded',
+        tinycomments_author: 'Author name',
+    });
+</script>

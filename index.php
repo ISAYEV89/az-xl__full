@@ -12,7 +12,7 @@
         <div class="row ">
 
             <?php
-            $posts = $db->prepare("SELECT * FROM `blog`");
+            $posts = $db->prepare("SELECT * FROM `blog` ORDER BY `id` DESC");
             $posts->execute();
 
             while ($post = $posts->fetch(PDO::FETCH_ASSOC)) {
@@ -36,7 +36,7 @@
             ?>
 
 
-            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 post--mb">
+            <div class="d-none col-xl-3 col-lg-4 col-md-6 col-sm-12 post--mb">
                 <div class="post  style_prevu_kit">
                     <a href="#" class="post-img">
                         <img src="./assets/image/blog/46-00.jpg" alt="">
