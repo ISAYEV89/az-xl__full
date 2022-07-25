@@ -52,7 +52,7 @@
         </li>
 
         <li>
-            <a href="/admin/comment/index.php" class="wui-side-menu-item ">
+            <a href="<?php $site_url?>/admin/comment/index.php" class="wui-side-menu-item ">
                 <i class="box-ico fa fa-comment"></i>
                 <span class="box-title">Sherhler</span>
             </a>
@@ -62,13 +62,17 @@
 
         <li>
             <a href="<?php $site_url?>/admin/contact/index.php" class="wui-side-menu-item ">
-                <!--<i class="box-ico fa fa-sign-out-alt"></i>-->
                 <i class="box-ico fa fa-envelope"></i>
                 <span class="box-title">Elaqe mektublari</span>
             </a>
         </li>
 
-
+        <li>
+            <a href="<?php $site_url?>/admin/settings/index.php" class="wui-side-menu-item ">
+                <i class="box-ico fa fa-setting"></i>
+                <span class="box-title">Ayarlar</span>
+            </a>
+        </li>
 
 
 

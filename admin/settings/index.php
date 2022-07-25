@@ -2,8 +2,13 @@
 include_once __DIR__ . '/../include/header.php';
 include_once __DIR__ . '/../include/menu.php';
 
-$row = $db->prepare("SELECT * FROM `tag` ORDER BY `id` DESC ");
+$row = $db->prepare("SELECT * FROM `settings` ORDER BY `id` DESC LIMIT 1");
 $row->execute();
+
+$setting = $row->fetch(PDO::FETCH_ASSOC);
+
+
+print_r($setting);
 
 ?>
 
@@ -15,55 +20,32 @@ $row->execute();
 
     <div class="page">
         <div class="page-header">
-            <div>Taglar</div>
+            <div>Ayarlar</div>
         </div>
         <div class="page-main overflow">
 
-            <div class="tag-list">
-                <h2>Taglarin siyahisi</h2>
+            <form action="" method="post">
+                <h5>Tel nomresi</h5>
+                <input type="text" name="tag-name" value="<?php echo $setting['tel'] ?>">
+                <br><br>
 
-                <div>
-                    <?php
-                    while ($tag = $row->fetch(PDO::FETCH_ASSOC)) {
-                        ?>
-                        <div class="sidebar-area__tag">
-                            <p class="tag-name"><?php echo $tag['name'] ?></p>
+                <h5>Tel nomresi</h5>
+                <input type="text" name="tag-name" value="<?php echo $setting['adress'] ?>">
+                <br><br>
 
-                            <a class="edit-icon"
-                               href="<?php echo $site_url ?>/admin/tag/add.php?id=<?php echo $tag['id']; ?>">
-                                <i class="fa fa-edit"></i>
-                            </a>
+                <h5>Tel nomresi</h5>
+                <input type="text" name="tag-name" value="<?php echo $setting['email'] ?>">
+                <br><br>
 
-                            <a class="delete-icon deleteItem confirm"
-                               href="<?php echo $site_url ?>/admin/tag/delete.php?delete=<?php echo $tag['id']; ?>">
-                                <i class="fas fa-trash-alt"></i>
-                            </a>
+                <h5>Tel nomresi</h5>
+                <input type="text" name="tag-name">
+                <br><br>
 
-
-                        </div>
-                        <?php
-
-                    }
-
-                    ?>
+                <input type="submit" name="add_tag" value="deyishdir">
 
 
-                </div>
-            </div>
+            </form>
 
-            <div class="tag-add">
-                <h2>Tag elave et</h2>
-
-                <form action="" method="post">
-
-                    <input type="text" name="tag-name">
-
-                    <input type="submit" name="add_tag" value="elave et">
-
-                </form>
-
-
-            </div>
 
         </div>
     </div>
