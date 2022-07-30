@@ -7,9 +7,6 @@ $row->execute();
 
 $setting = $row->fetch(PDO::FETCH_ASSOC);
 
-
-print_r($setting);
-
 ?>
 
 
@@ -38,6 +35,10 @@ print_r($setting);
                 <br><br>
 
                 <h5>Tel nomresi</h5>
+                <input type="text" name="tag-name">
+                <br><br>
+
+                <h5>blog sayi</h5>
                 <input type="text" name="tag-name">
                 <br><br>
 
