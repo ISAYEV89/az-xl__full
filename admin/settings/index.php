@@ -38,7 +38,7 @@ $setting = $row->fetch(PDO::FETCH_ASSOC);
                 <input type="text" name="tag-name">
                 <br><br>
 
-                <h5>blog sayi</h5>
+                <h5>Blog sayi</h5>
                 <input type="text" name="tag-name">
                 <br><br>
 

@@ -118,7 +118,12 @@ include_once __DIR__ . '/../include/menu.php';
 
                 <div class="blog-add__wrap">
                     <p class="blog-add__title">Metn :</p>
-                    <textarea class="blog-add__textarea" id="mytextarea" name="text" ></textarea>
+<!--                    <textarea class="blog-add__textarea" id="mytextarea" name="text" ></textarea>-->
+<!--                    <div id="editor"></div>-->
+                    <textarea name="text"  id="editor" cols="30" rows="10"><?php  echo $site_url ?></textarea>
+
+
+                    <img src=" <?php echo $site_url . '/admin/blog/uploads/accept_icon.png' ?> " alt="">
                 </div>
 
 
@@ -140,7 +145,7 @@ include_once __DIR__ . '/../include/menu.php';
 
 </div>
 
-<script src="https://cdn.tiny.cloud/1/e9tro6qwkzjq1yf5ijerp38bwwc506bghah3fsr8ovktfgda/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+
 <?php
 
 
@@ -187,14 +192,19 @@ if (isset($_POST['btn_submit'])) {
 
 include_once __DIR__ . '/../include/footer.php';
 ?>
+<!--<script src="https://cdn.ckeditor.com/ckeditor5/35.0.1/classic/ckeditor.js"></script>-->
+<!--<script src="https://cdn.ckeditor.com/ckeditor5/35.0.1/classic/ckeditor.js"></script>-->
+
+<script src="//cdn.ckeditor.com/4.19.1/full/ckeditor.js"></script>
+
+
+
 
 <script>
-    tinymce.init({
-        selector: '#mytextarea',
-        plugins: 'a11ychecker advcode casechange export formatpainter image editimage linkchecker autolink lists checklist media mediaembed pageembed permanentpen powerpaste table advtable tableofcontents tinycomments tinymcespellchecker',
-        toolbar: 'a11ycheck addcomment showcomments casechange checklist code export formatpainter image editimage pageembed permanentpen table tableofcontents',
-        toolbar_mode: 'floating',
-        tinycomments_mode: 'embedded',
-        tinycomments_author: 'Author name',
-    });
+    CKEDITOR.replace( 'editor', {
+        filebrowserUploadUrl: 'ck_upload.php',
+        filebrowserUploadMethod: 'form'
+    } );
+
+
 </script>
