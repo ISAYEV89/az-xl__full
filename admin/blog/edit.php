@@ -120,10 +120,10 @@ include_once __DIR__ . '/../include/menu.php';
                     <p class="blog-add__title">Metn :</p>
 <!--                    <textarea class="blog-add__textarea" id="mytextarea" name="text" ></textarea>-->
 <!--                    <div id="editor"></div>-->
-                    <textarea name="text"  id="editor" cols="30" rows="10"><?php  echo $site_url ?></textarea>
+                    <textarea name="text"  id="editor" cols="30" rows="10"></textarea>
 
 
-                    <img src=" <?php echo $site_url . '/admin/blog/uploads/accept_icon.png' ?> " alt="">
+                    <!--<img src=" <?php /*echo $site_url . '/admin/blog/uploads/accept_icon.png' */?> " alt="">-->
                 </div>
 
 
@@ -195,7 +195,7 @@ include_once __DIR__ . '/../include/footer.php';
 <!--<script src="https://cdn.ckeditor.com/ckeditor5/35.0.1/classic/ckeditor.js"></script>-->
 <!--<script src="https://cdn.ckeditor.com/ckeditor5/35.0.1/classic/ckeditor.js"></script>-->
 
-<script src="//cdn.ckeditor.com/4.19.1/full/ckeditor.js"></script>
+<script src="<?php echo $site_url . '/admin/ckeditor/ckeditor.js' ?>"></script>
 
 
 
@@ -203,8 +203,13 @@ include_once __DIR__ . '/../include/footer.php';
 <script>
     CKEDITOR.replace( 'editor', {
         filebrowserUploadUrl: 'ck_upload.php',
-        filebrowserUploadMethod: 'form'
+        filebrowserUploadMethod: 'form',
+        language: 'az',
+        "extraPlugins" : 'imagebrowser',
+        "imageBrowser_listUrl": "/admin/blog/uploads/images_list.json"
     } );
+
+
 
 
 </script>
