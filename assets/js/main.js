@@ -1,7 +1,5 @@
 const siteUrl = 'http://az-xl.local';
 
-console.log('asdasd');
-
 ////group input ( input animation )
 
 function checkGroupInputValue(className) {
@@ -122,3 +120,121 @@ $(document).keyup(function (e) {
     }
 });
 
+
+//// star rating
+
+
+let starInfoAdd = JSON.parse(localStorage.getItem('starRating'));
+
+let blog_id = $('#blogId').val();
+
+if (starInfoAdd != null) {
+
+    for (let i = 0; i < starInfoAdd.length; i++) {
+        if (+starInfoAdd[i].blogId === +blog_id) {
+
+            let a =starInfoAdd[i].star;
+            $(`#star-${a}`).attr('checked', true);
+            break;
+        }
+
+    }
+
+}
+
+// $(`#star-${a}`).attr('checked', true);
+
+
+$('.star-item').click(function () {
+
+    let updt = 0;
+    let star = $(this).val();
+    let blogId = $('#blogId').val();
+    var id = '';
+
+    let starInfo = JSON.parse(localStorage.getItem('starRating'));
+
+    if (starInfo == null) {
+
+        starInfo = [];
+
+        $.ajax({
+            url: siteUrl + '/ajax/star.php',
+            method: 'POST',
+            data: {
+                "star": star,
+                "blogId": blogId,
+                "updt": updt,
+            },
+            dataType: "text",
+            async: false,
+            global: false,
+            success: function (data) {
+                let starInfo2 = {"blogId": blogId, "star": star, "id": data};
+                starInfo.push(starInfo2);
+                localStorage.setItem('starRating', JSON.stringify(starInfo));
+            }
+        })
+
+    } else if (starInfo !== null) {
+
+        starInfo = JSON.parse(localStorage.getItem('starRating'));
+
+        let find = 0;
+
+        for (let i = 0; i < starInfo.length; i++) {
+
+            if (+starInfo[i].blogId === +blogId) {
+                starInfo[i].star = star;
+                find = 1;
+                updt = 1;
+                id = starInfo[i].id;
+
+
+                $.ajax({
+                    url: siteUrl + '/ajax/star.php',
+                    method: 'POST',
+                    data: {
+                        "star": star,
+                        "blogId": blogId,
+                        "id": id,
+                        "updt": updt,
+                    },
+                    dataType: "text",
+                    async: false,
+                    global: false,
+                    success: function (data) {
+                        localStorage.setItem('starRating', JSON.stringify(starInfo));
+                    }
+                });
+                break;
+            }
+
+        }
+
+
+        if (+find === 0) {
+            $.ajax({
+                url: siteUrl + '/ajax/star.php',
+                method: 'POST',
+                data: {
+                    "star": star,
+                    "blogId": blogId,
+                    "updt": updt,
+                },
+                dataType: "text",
+                async: false,
+                global: false,
+                success: function (data) {
+                    let starInfo2 = {"blogId": blogId, "star": star, "id": data};
+                    starInfo.push(starInfo2);
+                    localStorage.setItem('starRating', JSON.stringify(starInfo));
+                }
+            })
+        }
+
+
+    }
+
+
+});

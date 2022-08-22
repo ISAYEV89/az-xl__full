@@ -43,3 +43,36 @@
            Baza
            yaradarkən bəzi nüanslara da diqqət yetirmək lazımdır:</p>-->
 </div>
+
+
+//// blog img ilk shekil
+
+<div class="blog-img">
+    <img src="<?php echo $site_url . '/admin/image/blog/' . $post['img'] ?>" alt="">
+    <p class="blog-label">
+        <?php
+        $l_id = $post['level_id'];
+        $level = $db->prepare("SELECT * FROM `level` WHERE `id` = '$l_id' LIMIT 1");
+        $level -> execute();
+        $l = $level->fetch(PDO::FETCH_ASSOC);
+        echo $l['name'];
+        ?>
+    </p>
+</div>
+
+
+
+//// sherh
+
+<div class="comment-wrap__item">
+
+    <div class="comment-wrap__info">
+        <h5 class="comment-wrap__name">Morri Mortalmente</h5>
+        <p class="comment-wrap__date">15.07.2022</p>
+    </div>
+
+    <p class="comment-wrap__text">Like some people said You next generation people don't let
+        this song die out, it's such a
+        bop</p>
+
+</div>
