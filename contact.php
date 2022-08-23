@@ -115,28 +115,9 @@
                     </div>
 
                 </form>
-
             </div>
-
-
         </div>
 
-       <!-- <div class="overlay-bg"></div>
-        <div class="overlay-content popup1 f-modal-alert">
-            <div class="popup-flex">
-                <h2 class="user-header__title">Profil melumatlarini deyishdirmek</h2>
-                <div class="f-modal-icon f-modal-success animate">
-                    <span class="f-modal-line f-modal-tip animateSuccessTip"></span>
-                    <span class="f-modal-line f-modal-long animateSuccessLong"></span>
-                    <div class="f-modal-placeholder"></div>
-                    <div class="f-modal-fix"></div>
-                </div>
-                <div>
-                    <input type="submit" class="group__submit close-btn " value="CLOSE">
-                </div>
-            </div>
-
-        </div>-->
     </div>
 </div>
 

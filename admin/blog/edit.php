@@ -118,12 +118,7 @@ include_once __DIR__ . '/../include/menu.php';
 
                 <div class="blog-add__wrap">
                     <p class="blog-add__title">Metn :</p>
-<!--                    <textarea class="blog-add__textarea" id="mytextarea" name="text" ></textarea>-->
-<!--                    <div id="editor"></div>-->
                     <textarea name="text"  id="editor" cols="30" rows="10"></textarea>
-
-
-                    <!--<img src=" <?php /*echo $site_url . '/admin/blog/uploads/accept_icon.png' */?> " alt="">-->
                 </div>
 
 
@@ -192,12 +187,8 @@ if (isset($_POST['btn_submit'])) {
 
 include_once __DIR__ . '/../include/footer.php';
 ?>
-<!--<script src="https://cdn.ckeditor.com/ckeditor5/35.0.1/classic/ckeditor.js"></script>-->
-<!--<script src="https://cdn.ckeditor.com/ckeditor5/35.0.1/classic/ckeditor.js"></script>-->
 
 <script src="<?php echo $site_url . '/admin/ckeditor/ckeditor.js' ?>"></script>
-
-
 
 
 <script>
@@ -206,10 +197,7 @@ include_once __DIR__ . '/../include/footer.php';
         filebrowserUploadMethod: 'form',
         language: 'az',
         "extraPlugins" : 'imagebrowser',
-        "imageBrowser_listUrl": "/admin/blog/uploads/images_list.json"
+        "imageBrowser_listUrl": "/admin/blog/images_list.json"
     } );
-
-
-
 
 </script>

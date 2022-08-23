@@ -1,4 +1,5 @@
 <?php
+$site_url = 'http://az-xl.local';
 // Define file upload path
 $upload_dir = array(
     'img' => 'uploads/',
@@ -6,9 +7,9 @@ $upload_dir = array(
 
 // Allowed image properties
 $imgset = array(
-    'maxsize' => 2000,
-    'maxwidth' => 1024,
-    'maxheight' => 800,
+    'maxsize' => 200000,
+    'maxwidth' => 10240,
+    'maxheight' => 8000,
     'minwidth' => 10,
     'minheight' => 10,
     'type' => array('bmp', 'gif', 'jpg', 'jpeg', 'png', 'jfif'),
@@ -79,13 +80,26 @@ if (isset($_FILES['upload']) && strlen($_FILES['upload']['name']) > 1) {
             $url = $site_url . '/admin/blog/' . $upload_dir . $f_name;
             $msg = F_NAME . '.' . $type . ' successfully uploaded: \\n- Size: ' . number_format($_FILES['upload']['size'] / 1024, 2, '.', '') . ' KB';
             $re = in_array($type, $imgset['type']) ? "<script>window.parent.CKEDITOR.tools.callFunction($CKEditorFuncNum, '$url', '$msg')</script>" : '<script>var cke_ob = window.parent.CKEDITOR; for(var ckid in cke_ob.instances) { if(cke_ob.instances[ckid].focusManager.hasFocus) break;} cke_ob.instances[ckid].insertHtml(\' \', \'unfiltered_html\'); alert("' . $msg . '"); var dialog = cke_ob.dialog.getCurrent();dialog.hide();</script>';
+            $json = file_get_contents('images_list.json');
+            $data = json_decode($json);
+            $data2 = [
+                'image' => $site_url . '/admin/blog/uploads/' . F_NAME . '.' . $type,
+                'thumb' => $site_url . '/admin/blog/uploads/' . F_NAME . '.' . $type,
+                'folder' => "blog",
+            ];
+
+            $data[] = $data2;
+            file_put_contents('images_list.json', json_encode($data));
+
         } else {
             $re = '<script>alert("Unable to upload the file")</script>';
         }
     } else {
         $re = '<script>alert("' . $re . '")</script>';
+
     }
 }
+
 
 // Render HTML output
 @header('Content-type: text/html; charset=utf-8');

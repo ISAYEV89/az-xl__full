@@ -30,6 +30,8 @@ $view = $post['view'] + 1;
 $view_upt = $db -> prepare("UPDATE `blog`  SET view=:view WHERE id='$id'");
 $view_upt -> execute(array('view' => $view));
 
+
+
 ?>
 
 
@@ -55,18 +57,26 @@ $view_upt -> execute(array('view' => $view));
                         <div class="soc-blog__title">Paylash:</div>
 
                         <ul class="soc-blog__menu">
-                            <li class="soc-blog__item"><a class="soc-blog__link soc-fb" href=""><i
-                                            class="fab fa-facebook-f"></i></a></li>
+                            <li class="soc-blog__item">
+                                <a class="soc-blog__link soc-fb" target="_blank"
+                                   href="http://www.facebook.com/sharer.php?u=http://erp-consulting.az/blog.php?id=5"><i
+                                            class="fab fa-facebook-f"></i>
+                                    <a target="_blank"">
+                                </a>
+                            </li>
                             <li class="soc-blog__item"><a class="soc-blog__link soc-in" href=""><i
                                             class="fab fa-linkedin-in"></i></a></li>
                             <li class="soc-blog__item"><a class="soc-blog__link soc-telegram" href=""><i
                                             class="fab fa-telegram-plane"></i></a></li>
-                            <li class="soc-blog__item"><a class="soc-blog__link soc-wp" href=""><i
-                                            class="fab fa-whatsapp"></i></a></li>
+                            <li class="soc-blog__item"><a class="soc-blog__link soc-wp"
+                            href="whatsapp://send?text=Azərbaycanda karantin rejiminin müddəti  http://metbuat.az/news/1446141">
+                                    <i class="fab fa-whatsapp"></i></a></li>
                             <li class="soc-blog__item"><a class="soc-blog__link soc-letter" href=""><i
                                             class="far fa-envelope"></i></a></li>
                         </ul>
                     </div>
+
+
 
                     <div class="star-wrap">
                         <h3 class="star-wrap__title">Məlumat nə qədər faydalı oldu?</h3>

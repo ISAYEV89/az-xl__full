@@ -38,7 +38,7 @@ $row->execute();
                     <tr>
                         <td><?php echo $s ?></td>
                         <td><?php echo $e['name'] ?></td>
-                        <td><?php echo $e['comment'] ?></td>
+                        <td><?php echo $e['text'] ?></td>
                         <td><?php echo $e['date'] ?></td>
                         <td><?php echo $e['blog_id'] ?></td>
 

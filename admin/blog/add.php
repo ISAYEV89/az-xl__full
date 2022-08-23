@@ -146,8 +146,6 @@ if (isset($_GET['id'])) {
 
                 <div class="blog-add__wrap">
                     <p class="blog-add__title">Metn :</p>
-
-
                     <textarea name="text"  id="editor" cols="30" rows="10"><?php echo $baza2['text'] ?></textarea>
                 </div>
 
@@ -179,7 +177,7 @@ if (isset($_GET['id'])) {
 
 
 
-<script src="//cdn.ckeditor.com/4.19.1/full/ckeditor.js"></script>
+
 <?php
 
 
@@ -230,15 +228,15 @@ if (isset($_POST['btn_submit'])) {
 include_once __DIR__ . '/../include/footer.php';
 ?>
 
-
+<script src="<?php echo $site_url . '/admin/ckeditor/ckeditor.js' ?>"></script>
 
 <script>
     CKEDITOR.replace( 'editor', {
-        filebrowserUploadUrl: 'ckeditor/ck_upload.php',
+        filebrowserUploadUrl: 'ck_upload.php',
         filebrowserUploadMethod: 'form',
-        // extraPlugins : 'imagebrowser',
-        // "imageBrowser_listUrl" : "/ckeditor-imagebrowser/demo/images/images_list.json"
+        language: 'az',
+        "extraPlugins" : 'imagebrowser',
+        "imageBrowser_listUrl": "/admin/blog/images_list.json"
     } );
-
 
 </script>

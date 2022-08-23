@@ -394,3 +394,7 @@ body {
     height: 60px;
     object-fit: cover;
 }
+
+#cke_1_contents {
+    min-height: 500px;
+}
