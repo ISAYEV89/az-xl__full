@@ -11,7 +11,7 @@ if (isset($_GET['id'])) {
     $baza2 = $baza->fetch(PDO::FETCH_ASSOC);
 
     if (empty($baza2)) {
-        header("Location: $site_url/blog/level/index.php");
+        header("Location: $site_url/blog/index.php");
     }
 
 }
